@@ -2,29 +2,29 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link
       rel="stylesheet"
       as="style"
       onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Public+Sans:wght@400;500;700;900"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans:wght@400;500;700;900&amp;family=Public+Sans:wght@400;500;700;900"
     />
     <title>Reserva de Laboratorio</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   </head>
   <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-gray-50 overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+    <div class="relative flex size-full min-h-screen flex-col bg-gray-50 group/design-root overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
       <div class="layout-container flex h-full grow flex-col">
 
-        <!-- Hero Section -->
+        <!-- Hero principal -->
         <div class="px-40 flex flex-1 justify-center py-5">
           <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
             <div class="@container">
               <div class="@[480px]:p-4">
                 <div
                   class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
-                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=960&q=80");'
+                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAL1AshWaL0Rd28YUsY2sU2L5MrsdTaiLK65uDqKYt3bFa0tz8ixpOjdW5Ge6FJMEVrFugMkY8Nq-27My47k8X4Znq_dEOp26SP9S3Mmo6h2JZWzP643X1dRfRyJCEB7xmitaYZBQ6PzZ16nkCC73S5XM2RX_HG3JHL5bCK0eCYk7iyXrV5RnVVm9saCny4L0au473nBC7uGTffbleocynkBVzAAEksEmFHQAlsl7Y1XM4BxIQMgZPCYNtLAzXl8LLjKPClJMuuCzQ");'
                 >
                   <div class="flex flex-col gap-2 text-center">
                     <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
@@ -34,64 +34,43 @@
                       Explora nuestros laboratorios de última generación para Ingeniería Civil en la Universidad Católica de Colombia. Elige el área y reserva tu espacio para investigación y docencia.
                     </h2>
                   </div>
-                  <a href="#areas-civil" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#dce8f3] text-[#101518] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] mt-4 transition hover:scale-105">
+                  <a href="#areas-civil" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#dce8f3] text-[#101518] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] transition hover:scale-105">
                     <span class="truncate">Ver Laboratorios</span>
                   </a>
                 </div>
               </div>
             </div>
 
-            <!-- Sección de Áreas de Ingeniería Civil -->
-            <a id="areas-civil"></a>
-            <h2 class="text-[#101518] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-8 text-center">Áreas de Ingeniería Civil</h2>
-            <div class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-5 p-4">
-
+            <!-- Áreas de Ingeniería Civil -->
+            <h2 id="areas-civil" class="text-[#101518] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-10">Áreas de Ingeniería Civil</h2>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
               <!-- Construcción -->
-              <a href="https://outlook.office.com/book/Prueba1@ucatolica.edu.co/?ismsaljsauthenabled" target="_blank"
-                class="flex flex-1 gap-3 rounded-lg border border-[#d4dce2] bg-gray-50 p-4 flex-col transition hover:scale-105 hover:shadow-lg"
-                title="Reservar área de Construcción">
-                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-14 h-14 shrink-0"
-                  style='background-image: url("https://images.unsplash.com/photo-1503389152951-9c3d1662b05b?auto=format&fit=crop&w=240&q=80");'>
-                </div>
+              <a href="https://outlook.office.com/book/Prueba1@ucatolica.edu.co/?ismsaljsauthenabled" target="_blank" class="flex flex-1 gap-3 rounded-lg border border-[#d4dce2] bg-gray-50 p-4 flex-col transition hover:scale-105 hover:shadow-lg">
+                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style='background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80");'></div>
                 <div class="flex flex-col gap-1">
                   <h2 class="text-[#101518] text-base font-bold leading-tight">Construcción</h2>
                   <p class="text-[#5c748a] text-sm font-normal leading-normal">Reserva espacios para prácticas y ensayos en el área de construcción.</p>
                 </div>
               </a>
-
               <!-- Geotecnia y Pavimentos -->
-              <a href="https://outlook.office.com/book/GeotecniayPavimentos@ucatolica.edu.co/?ismsaljsauthenabled" target="_blank"
-                class="flex flex-1 gap-3 rounded-lg border border-[#d4dce2] bg-gray-50 p-4 flex-col transition hover:scale-105 hover:shadow-lg"
-                title="Reservar área de Geotecnia y Pavimentos">
-                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-14 h-14 shrink-0"
-                  style='background-image: url("https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=240&q=80");'>
-                </div>
+              <a href="https://outlook.office.com/book/GeotecniayPavimentos@ucatolica.edu.co/?ismsaljsauthenabled" target="_blank" class="flex flex-1 gap-3 rounded-lg border border-[#d4dce2] bg-gray-50 p-4 flex-col transition hover:scale-105 hover:shadow-lg">
+                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style='background-image: url("https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80");'></div>
                 <div class="flex flex-col gap-1">
                   <h2 class="text-[#101518] text-base font-bold leading-tight">Geotecnia y Pavimentos</h2>
                   <p class="text-[#5c748a] text-sm font-normal leading-normal">Ensayos y estudios de suelos, pavimentos y materiales granulares.</p>
                 </div>
               </a>
-
               <!-- Recursos Hídricos -->
-              <a href="https://outlook.office.com/book/RecursosHdricos@ucatolica.edu.co/?ismsaljsauthenabled" target="_blank"
-                class="flex flex-1 gap-3 rounded-lg border border-[#d4dce2] bg-gray-50 p-4 flex-col transition hover:scale-105 hover:shadow-lg"
-                title="Reservar área de Recursos Hídricos">
-                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-14 h-14 shrink-0"
-                  style='background-image: url("https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=240&q=80");'>
-                </div>
+              <a href="https://outlook.office.com/book/RecursosHdricos@ucatolica.edu.co/?ismsaljsauthenabled" target="_blank" class="flex flex-1 gap-3 rounded-lg border border-[#d4dce2] bg-gray-50 p-4 flex-col transition hover:scale-105 hover:shadow-lg">
+                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style='background-image: url("https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=400&q=80");'></div>
                 <div class="flex flex-col gap-1">
                   <h2 class="text-[#101518] text-base font-bold leading-tight">Recursos Hídricos</h2>
                   <p class="text-[#5c748a] text-sm font-normal leading-normal">Laboratorio de hidráulica, hidrología y simulación de recursos hídricos.</p>
                 </div>
               </a>
-
               <!-- Vías y Transporte -->
-              <a href="https://outlook.office.com/book/VasyTransporte@ucatolica.edu.co/?ismsaljsauthenabled" target="_blank"
-                class="flex flex-1 gap-3 rounded-lg border border-[#d4dce2] bg-gray-50 p-4 flex-col transition hover:scale-105 hover:shadow-lg"
-                title="Reservar área de Vías y Transporte">
-                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-14 h-14 shrink-0"
-                  style='background-image: url("https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=240&q=80");'>
-                </div>
+              <a href="https://outlook.office.com/book/VasyTransporte@ucatolica.edu.co/?ismsaljsauthenabled" target="_blank" class="flex flex-1 gap-3 rounded-lg border border-[#d4dce2] bg-gray-50 p-4 flex-col transition hover:scale-105 hover:shadow-lg">
+                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style='background-image: url("https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80");'></div>
                 <div class="flex flex-col gap-1">
                   <h2 class="text-[#101518] text-base font-bold leading-tight">Vías y Transporte</h2>
                   <p class="text-[#5c748a] text-sm font-normal leading-normal">Espacio para estudios y pruebas de vías, tránsito y transporte.</p>
@@ -99,28 +78,29 @@
               </a>
             </div>
 
-            <!-- Bloque de Ayuda / Soporte -->
-            <div class="@container">
-              <div class="flex flex-col justify-center items-center gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
-                <div class="flex flex-col gap-2 text-center">
-                  <h1 class="text-[#101518] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
-                    ¿Necesitas ayuda?
-                  </h1>
-                  <p class="text-[#101518] text-base font-normal leading-normal max-w-[720px]">Contacta a nuestro equipo de soporte para cualquier consulta o asistencia con las reservas de laboratorios.</p>
-                </div>
-                <div class="flex flex-1 justify-center">
-                  <div class="flex justify-center">
-                    <a href="mailto:labscivil@ucatolica.edu.co"
-                      class="flex min-w-[160px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#dce8f3] text-[#101518] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow transition hover:scale-105"
-                    >
-                      <span class="truncate">Contactar Soporte</span>
-                    </a>
-                  </div>
-                </div>
+            <!-- Bloque ayuda -->
+            <div class="@container flex flex-col items-center justify-center gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
+              <div class="flex flex-col gap-2 text-center">
+                <h1 class="text-[#101518] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
+                  ¿Necesitas ayuda?
+                </h1>
+                <p class="text-[#101518] text-base font-normal leading-normal max-w-[720px]">
+                  Contacta a nuestro equipo de soporte para cualquier consulta o asistencia con las reservas de laboratorios.
+                </p>
+              </div>
+              <div class="flex flex-1 justify-center">
+                <a href="mailto:labscivil@ucatolica.edu.co" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#dce8f3] text-[#101518] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow transition hover:scale-105">
+                  <span class="truncate">Contactar Soporte</span>
+                </a>
               </div>
             </div>
 
-            <!-- Footer -->
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="flex justify-center">
+          <div class="flex max-w-[960px] flex-1 flex-col">
             <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
               <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
                 <a class="text-[#5c748a] text-base font-normal leading-normal min-w-40" href="#">Términos de servicio</a>
@@ -130,7 +110,8 @@
               <p class="text-[#5c748a] text-base font-normal leading-normal">@2025 Universidad Católica de Colombia. Todos los derechos reservados.</p>
             </footer>
           </div>
-        </div>
+        </footer>
+
       </div>
     </div>
   </body>
