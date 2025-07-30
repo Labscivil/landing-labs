@@ -12,6 +12,17 @@
     <title>Reserva de Laboratorio</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      // Función para pedir clave antes de redirigir
+      function pedirClave(url) {
+        const clave = prompt("Para acceder a la reserva, ingresa la clave enviada por la Coordinación de Laboratorios.");
+        if (clave && clave.trim().toUpperCase() === "UCATOLICA") {
+          window.open(url, "_blank");
+        } else if (clave !== null) {
+          alert("Clave incorrecta. Solicita la clave siguiendo el procedimiento establecido.");
+        }
+      }
+    </script>
   </head>
   <body>
     <div class="relative flex size-full min-h-screen flex-col bg-gray-50 group/design-root overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
@@ -34,48 +45,78 @@
                       Explora nuestros laboratorios de última generación para Ingeniería Civil en la Universidad Católica de Colombia. Elige el área y reserva tu espacio para investigación y docencia.
                     </h2>
                   </div>
-                  <a href="#areas-civil" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#dce8f3] text-[#101518] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] transition hover:scale-105">
+                  <a href="#instrucciones" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#dce8f3] text-[#101518] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] transition hover:scale-105">
                     <span class="truncate">Ver Laboratorios</span>
                   </a>
                 </div>
               </div>
             </div>
 
+            <!-- INSTRUCCIONES -->
+            <div id="instrucciones" class="mt-10 bg-white rounded-xl shadow-md p-6 flex flex-col gap-4">
+              <h2 class="text-[#101518] text-xl font-bold mb-2">¿Cómo reservar un laboratorio?</h2>
+              <ol class="list-decimal pl-6 text-[#222] space-y-1">
+                 <li>
+                  <span class="font-semibold">El Tutor debe solicitar una practica dirigida </span> en la cual con acompañamiento del técnico de laboratorio, definir los lineamientos para desarrollar el trabajo de grado y llenar los siguientes documentos.
+                </li>
+			<li>
+                  <span class="font-semibold">Descarga y completa los siguientes formatos:</span>
+                  <ul class="list-disc pl-6 mt-1">
+                    <li>
+                      <a href="https://ucatolicaeduco.sharepoint.com/:b:/g/ETSy698CLZ1DkyzHJl8AGaMB0hXyP-ILqma5djyEqaLmZQ?e=VORvfF" target="_blank" class="text-blue-700 underline font-semibold">Formato programación de tiempo de laboratorio (PDF)</a>
+                    </li>
+                    <li>
+                      <a href="https://ucatolicaeduco.sharepoint.com/:x:/g/EcZEc-whIg1Jpu6-D1H00JIBtHdewEy6cjBzjcoq9uZhww?e=g7XGPh" target="_blank" class="text-blue-700 underline font-semibold">F 053 LI 111 03 ConsumoLaboratorioProyectos (Excel)</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span class="font-semibold">Llena el formulario de formalización de proyectos</span> y sube los documentos diligenciados:
+                  <br />
+                  <a href="https://forms.office.com/r/JWiCYah3NP" target="_blank" class="text-blue-700 underline font-semibold">Ir al formulario</a>
+                </li>
+                <li>
+                  Una vez aprobado tu proyecto y recibas la clave, selecciona el área y reserva tu laboratorio.
+                </li>
+              </ol>
+              <ul class="list-disc pl-6 text-[#1d3557] space-y-1 mt-3">
+                <li>
+                  <span class="font-semibold">Si en el momento de revisión de su solicitud de formalización no se han adjuntado los formularios firmados, o si los enviaron diligenciados incorrectamente, no se dará trámite a la solicitud.</span>
+                </li>
+                <li>
+                  <span class="font-semibold">Se recomienda solicitar la cita con un mínimo de 48 horas de anticipación</span>, para que el equipo de técnicos pueda organizar y preparar todo en los laboratorios.
+                </li>
+              </ul>
+            </div>
+
             <!-- Áreas de Ingeniería Civil -->
             <h2 id="areas-civil" class="text-[#101518] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-10">Áreas de Ingeniería Civil</h2>
-            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-6 p-4">
               <!-- Construcción -->
-              <a href="https://outlook.office.com/book/Prueba1@ucatolica.edu.co/?ismsaljsauthenabled" target="_blank" class="flex flex-1 gap-3 rounded-lg border border-[#d4dce2] bg-gray-50 p-4 flex-col transition hover:scale-105 hover:shadow-lg">
-                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style='background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80");'></div>
-                <div class="flex flex-col gap-1">
+              <button onclick="pedirClave('https://outlook.office.com/book/CopiadeGeotecniayPavimentos@ucatolica.edu.co/?ismsaljsauthenabled')" class="flex flex-1 flex-col items-center gap-3 rounded-lg border border-[#d4dce2] bg-gray-50 p-6 transition hover:scale-105 hover:shadow-lg cursor-pointer">
+                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl w-24 h-24" style='background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80");'></div>
+                <div class="flex flex-col gap-1 items-center">
                   <h2 class="text-[#101518] text-base font-bold leading-tight">Construcción</h2>
-                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Reserva espacios para prácticas y ensayos en el área de construcción.</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal text-center">Reserva espacios para prácticas y ensayos en el área de construcción.</p>
                 </div>
-              </a>
+              </button>
               <!-- Geotecnia y Pavimentos -->
-              <a href="https://outlook.office.com/book/GeotecniayPavimentos@ucatolica.edu.co/?ismsaljsauthenabled" target="_blank" class="flex flex-1 gap-3 rounded-lg border border-[#d4dce2] bg-gray-50 p-4 flex-col transition hover:scale-105 hover:shadow-lg">
-                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style='background-image: url("https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80");'></div>
-                <div class="flex flex-col gap-1">
+              <button onclick="pedirClave('https://outlook.office.com/book/CopiadeGeotecniayPavimentos1@ucatolica.edu.co/?ismsaljsauthenabled')" class="flex flex-1 flex-col items-center gap-3 rounded-lg border border-[#d4dce2] bg-gray-50 p-6 transition hover:scale-105 hover:shadow-lg cursor-pointer">
+                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl w-24 h-24" style='background-image: url("https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80");'></div>
+                <div class="flex flex-col gap-1 items-center">
                   <h2 class="text-[#101518] text-base font-bold leading-tight">Geotecnia y Pavimentos</h2>
-                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Ensayos y estudios de suelos, pavimentos y materiales granulares.</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal text-center">Ensayos y estudios de suelos, pavimentos y materiales granulares.</p>
                 </div>
-              </a>
+              </button>
               <!-- Recursos Hídricos -->
-              <a href="https://outlook.office.com/book/RecursosHdricos@ucatolica.edu.co/?ismsaljsauthenabled" target="_blank" class="flex flex-1 gap-3 rounded-lg border border-[#d4dce2] bg-gray-50 p-4 flex-col transition hover:scale-105 hover:shadow-lg">
-                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style='background-image: url("https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=400&q=80");'></div>
-                <div class="flex flex-col gap-1">
+              <button onclick="pedirClave('https://outlook.office.com/book/CopiadeRecursosHdricos@ucatolica.edu.co/?ismsaljsauthenabled')" class="flex flex-1 flex-col items-center gap-3 rounded-lg border border-[#d4dce2] bg-gray-50 p-6 transition hover:scale-105 hover:shadow-lg cursor-pointer">
+                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl w-24 h-24" style='background-image: url("https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=400&q=80");'></div>
+                <div class="flex flex-col gap-1 items-center">
                   <h2 class="text-[#101518] text-base font-bold leading-tight">Recursos Hídricos</h2>
-                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Laboratorio de hidráulica, hidrología y simulación de recursos hídricos.</p>
+                  <p class="text-[#5c748a] text-sm font-normal leading-normal text-center">Laboratorio de hidráulica, hidrología y simulación de recursos hídricos.</p>
                 </div>
-              </a>
-              <!-- Vías y Transporte -->
-              <a href="https://outlook.office.com/book/VasyTransporte@ucatolica.edu.co/?ismsaljsauthenabled" target="_blank" class="flex flex-1 gap-3 rounded-lg border border-[#d4dce2] bg-gray-50 p-4 flex-col transition hover:scale-105 hover:shadow-lg">
-                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg w-10 shrink-0" style='background-image: url("https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80");'></div>
-                <div class="flex flex-col gap-1">
-                  <h2 class="text-[#101518] text-base font-bold leading-tight">Vías y Transporte</h2>
-                  <p class="text-[#5c748a] text-sm font-normal leading-normal">Espacio para estudios y pruebas de vías, tránsito y transporte.</p>
-                </div>
-              </a>
+              </button>
+              <!-- No hay Vías y Transporte para estudiantes -->
             </div>
 
             <!-- Bloque ayuda -->
@@ -102,16 +143,10 @@
         <footer class="flex justify-center">
           <div class="flex max-w-[960px] flex-1 flex-col">
             <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
-              <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
-                <a class="text-[#5c748a] text-base font-normal leading-normal min-w-40" href="#">Términos de servicio</a>
-                <a class="text-[#5c748a] text-base font-normal leading-normal min-w-40" href="#">Política de privacidad</a>
-                <a class="text-[#5c748a] text-base font-normal leading-normal min-w-40" href="#">Contáctanos</a>
-              </div>
               <p class="text-[#5c748a] text-base font-normal leading-normal">@2025 Universidad Católica de Colombia. Todos los derechos reservados.</p>
             </footer>
           </div>
         </footer>
-
       </div>
     </div>
   </body>
